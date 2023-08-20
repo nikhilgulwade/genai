@@ -51,7 +51,13 @@ def main():
 
         with col4:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]["summary"])
+            guest_info = podcast_info['podcast_guest']
+            if isinstance(guest_info, dict):
+              guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
+            else:
+              guest_summary = guest_info
+            st.write(guest_summary)
+            #st.write(podcast_info["podcast_guest"]["summary"])
 
         # Display the five key moments
         st.subheader("Key Moments")
@@ -104,6 +110,13 @@ def main():
 
         with col4:
             st.subheader("Podcast Guest Details")
+            st.subheader("Podcast Guest Details")
+            guest_info = podcast_info['podcast_guest']
+            if isinstance(guest_info, dict):
+              guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
+            else:
+              guest_summary = guest_info
+            st.write(guest_summary)
             #st.write(podcast_info["podcast_guest"]["summary"])
 
         # Display the five key moments
