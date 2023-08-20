@@ -20,7 +20,7 @@ def main():
         podcast_info = available_podcast_info[selected_podcast]
 
         # Right section - Newsletter content
-        st.header("Newsletter Content")
+        st.header("Podcast Transcript Dashboard")
 
         # Display the podcast title
         st.subheader("Episode Title")
@@ -42,7 +42,12 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            st.write(podcast_info['podcast_guest']['name'])
+            guest_info = podcast_info['podcast_guest']
+            if isinstance(guest_info, dict):
+              guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+            else:
+              guest_name = guest_info
+            st.write(guest_name)
 
         with col4:
             st.subheader("Podcast Guest Details")
@@ -68,7 +73,7 @@ def main():
         podcast_info = process_podcast_info(url)
 
         # Right section - Newsletter content
-        st.header("Newsletter Content")
+        st.header("Podcast Transcript")
 
         # Display the podcast title
         st.subheader("Episode Title")
@@ -90,7 +95,12 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            st.write(podcast_info['podcast_guest']['name'])
+            guest_info = podcast_info['podcast_guest']
+            if isinstance(guest_info, dict):
+              guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+            else:
+              guest_name = guest_info
+            st.write(guest_name)
 
         with col4:
             st.subheader("Podcast Guest Details")
