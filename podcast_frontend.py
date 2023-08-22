@@ -38,16 +38,16 @@ def main():
           st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3 = st.columns([3])
+        #col3 = st.columns([3])
 
-        with col3:
-          st.subheader("Podcast Guest")
-          guest_info = podcast_info['podcast_guest']
-          if isinstance(guest_info, dict):
-            guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
-          else:
-            guest_name = guest_info
-          st.write(guest_name)
+        #with col3:
+        st.subheader("Podcast Guest")
+        guest_info = podcast_info['podcast_guest']
+        if isinstance(guest_info, dict):
+          guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+        else:
+          guest_name = guest_info
+        st.write(guest_name)
 
         #with col4:
           #st.subheader("Guest Summary")
@@ -91,16 +91,16 @@ def main():
           st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3 = st.columns([3])
+        #col3 = st.columns([3])
 
-        with col3:
-          st.subheader("Podcast Guest")
-          guest_info = podcast_info['podcast_guest']
-          if isinstance(guest_info, dict):
-            guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
-          else:
-            guest_name = guest_info
-          st.write(guest_name)
+        #with col3:
+        st.subheader("Podcast Guest")
+        guest_info = podcast_info['podcast_guest']
+        if isinstance(guest_info, dict):
+          guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+        else:
+          guest_name = guest_info
+        st.write(guest_name)
 
         #with col4:
           #st.subheader("Guest Summary")
