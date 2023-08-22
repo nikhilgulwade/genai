@@ -56,7 +56,7 @@ def main():
               #guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
             #else:
               #guest_summary = guest_info
-            st.write(guest_summary)
+            st.subheader("Guest Summary")
             st.write(podcast_info["podcast_guest"]["summary"])
 
         # Display the five key moments
@@ -115,7 +115,7 @@ def main():
               #guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
             #else:
               #guest_summary = guest_info
-            st.write(guest_summary)
+            st.subheader("Guest Summary")
             st.write(podcast_info["podcast_guest"]["summary"])
 
         # Display the five key moments
