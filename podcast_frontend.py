@@ -41,8 +41,8 @@ def main():
         #col3 = st.columns([3])
         col3, col4 = st.columns([3, 7])
 
-        with col3:
-            """st.subheader("Podcast Guest")
+        """with col3:
+            st.subheader("Podcast Guest")
         guest_info = podcast_info['podcast_guest']
         if isinstance(guest_info, dict):
             guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
@@ -50,6 +50,7 @@ def main():
             guest_name = guest_info
         st.write(guest_name)
             """
+        with col3:
             st.subheader("Podcast Guest")
             st.write(podcast_info['podcast_guest']['name'])
 
@@ -102,8 +103,8 @@ def main():
         #col3 = st.columns([3])
         col3, col4 = st.columns([3, 7])
 
-        with col3:
-            """st.subheader("Podcast Guest")
+        """with col3:
+            st.subheader("Podcast Guest")
         guest_info = podcast_info['podcast_guest']
         if isinstance(guest_info, dict):
             guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
@@ -111,6 +112,7 @@ def main():
             guest_name = guest_info
         st.write(guest_name)
             """
+        with col3:
             st.subheader("Podcast Guest")
             st.write(podcast_info['podcast_guest']['name'])
 
