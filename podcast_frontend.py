@@ -31,41 +31,23 @@ def main():
 
         with col1:
             # Display the podcast episode summary
-            st.subheader("Podcast Episode Summary")
-            st.write(podcast_info['podcast_summary'])
+          st.subheader("Podcast Episode Summary")
+          st.write(podcast_info['podcast_summary'])
 
         with col2:
-            st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
+          st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
         #col3 = st.columns([3])
-        col3, col4 = st.columns([3, 7])
 
         #with col3:
-        #st.subheader("Podcast Guest")
-        #guest_info = podcast_info['podcast_guest']
-        #if isinstance(guest_info, dict):
-        #  guest_name = guest_info.get('name', 'Name did not find!')
-        #else:
-        #  guest_name = guest_info
-        #st.write(guest_name)
-
-
-        #st.subheader("Podcast Guest Details")
-        #guest_info = podcast_info['podcast_guest']
-        #if isinstance(guest_info, dict):
-        #  guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
-        #else:
-        #  guest_summary = guest_info
-        #st.write(guest_summary)
-
-        with col3:
-            st.subheader("Podcast Guest")
-            st.write(podcast_info["podcast_guest"]['name'])
-
-        with col4:
-            st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+        st.subheader("Podcast Guest")
+        guest_info = podcast_info['podcast_guest']
+        if isinstance(guest_info, dict):
+          guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+        else:
+          guest_name = guest_info
+        st.write(guest_name)
 
         #with col4:
           #st.subheader("Guest Summary")
@@ -102,42 +84,23 @@ def main():
 
         with col1:
             # Display the podcast episode summary
-            st.subheader("Podcast Episode Summary")
-            st.write(podcast_info['podcast_summary'])
+          st.subheader("Podcast Episode Summary")
+          st.write(podcast_info['podcast_summary'])
 
         with col2:
-            st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
+          st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
         #col3 = st.columns([3])
-        col3, col4 = st.columns([3, 7])
 
         #with col3:
-
-        #st.subheader("Podcast Guest")
-        #guest_info = podcast_info['podcast_guest']
-        #if isinstance(guest_info, dict):
-        #  guest_name = guest_info.get('name', 'Name did not find!')
-        #else:
-        #  guest_name = guest_info
-        #st.write(guest_name)
-
-
-        #st.subheader("Podcast Guest Details")
-        #guest_info = podcast_info['podcast_guest']
-        #if isinstance(guest_info, dict):
-        #  guest_summary = guest_info.get('summary', 'The Name you are searching does not match with any pages on Wikipedia!')
-        #else:
-        #  guest_summary = guest_info
-        #st.write(guest_summary)
-        
-        with col3:
-            st.subheader("Podcast Guest")
-            st.write(podcast_info["podcast_guest"]['name'])
-
-        with col4:
-            st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+        st.subheader("Podcast Guest")
+        guest_info = podcast_info['podcast_guest']
+        if isinstance(guest_info, dict):
+          guest_name = guest_info.get('name', 'The Name you are searching does not match with any pages on Wikipedia!')
+        else:
+          guest_name = guest_info
+        st.write(guest_name)
 
         #with col4:
           #st.subheader("Guest Summary")
@@ -166,7 +129,7 @@ def create_dict_from_json_files(folder_path):
 
 def process_podcast_info(url):
     f = modal.Function.lookup("corise-podcast-project", "process_podcast")
-    output = f.remote(url, '/content/podcast/')
+    output = f.call(url, '/content/podcast/')
     return output
 
 if __name__ == '__main__':
