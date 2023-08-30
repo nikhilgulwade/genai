@@ -45,7 +45,7 @@ def main():
         st.subheader("Podcast Guest")
         guest_info = podcast_info['podcast_guest']
         if isinstance(guest_info, dict):
-          guest_name = guest_info.get('name', 'Name did not find!')
+          guest_name = guest_info.get('name', 'Could not capture name!')
         else:
           guest_name = guest_info
         st.write(guest_name)
@@ -111,7 +111,7 @@ def main():
         st.subheader("Podcast Guest")
         guest_info = podcast_info['podcast_guest']
         if isinstance(guest_info, dict):
-          guest_name = guest_info.get('name', 'Name did not find!')
+          guest_name = guest_info.get('name', 'Could not capture name!')
         else:
           guest_name = guest_info
         st.write(guest_name)
